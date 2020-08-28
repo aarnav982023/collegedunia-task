@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card: React.FC<{ college: any }> = ({ college }) => {
-  console.log(college);
   return (
     <div className="card">
       <div className="college_img">
@@ -12,8 +11,12 @@ const Card: React.FC<{ college: any }> = ({ college }) => {
         </div>
         <div className="ranking">#{college.ranking}</div>
         <div className="tags">
-          {college.tags.map((tag: any) => {
-            return <div className="tag">{tag}</div>;
+          {college.tags.map((tag: any, index: number) => {
+            return (
+              <div className="tag" key={`tag${index}`}>
+                {tag}
+              </div>
+            );
           })}
         </div>
       </div>
@@ -23,9 +26,17 @@ const Card: React.FC<{ college: any }> = ({ college }) => {
           <div className="star-rating">
             {[1, 2, 3, 4, 5].map((i) => {
               if (i <= college.rating) {
-                return <span className="star-fill">★</span>;
+                return (
+                  <span className="star-fill" key={`star${i}`}>
+                    ★
+                  </span>
+                );
               } else {
-                return <span className="star-light">★</span>;
+                return (
+                  <span className="star-light" key={`star${i}`}>
+                    ★
+                  </span>
+                );
               }
             })}
           </div>
@@ -35,8 +46,12 @@ const Card: React.FC<{ college: any }> = ({ college }) => {
           <div className="discount">•{college.discount}</div>
         </div>
         <div className="nearby-div">
-          {college.nearest_place.map((nearBy: any) => {
-            return <span className="nearby">{nearBy}</span>;
+          {college.nearest_place.map((nearBy: any, index: number) => {
+            return (
+              <span className="nearby" key={`nearby${index}`}>
+                {nearBy}
+              </span>
+            );
           })}
         </div>
         <div className="fees">
