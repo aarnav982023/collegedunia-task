@@ -12,6 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .row {
@@ -136,4 +137,106 @@ body {
 }
 .star-light {
   color: darkgray;
+}
+
+.original-fees-div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.original-fees {
+  text-decoration: line-through;
+  color: darkgrey;
+}
+.discount {
+  background-color: red;
+  color: white;
+  text-align: end;
+  width: 3rem;
+  display: inline-block;
+}
+
+.nearby-div {
+  position: absolute;
+  margin-top: 2.3rem;
+  margin-left: 0.5rem;
+}
+.nearby:not(:last-child)::after {
+  content: " | ";
+}
+
+.nearby {
+  color: grey;
+}
+
+.nearby:first-child {
+  color: black;
+}
+
+.fees {
+  position: absolute;
+  right: 0;
+  margin: 3rem 1rem;
+}
+
+.discounted-fees {
+  font-size: 2.5rem;
+  color: red;
+  font-weight: 600;
+  text-align: center;
+}
+.fees_cycle {
+  text-align: center;
+  color: grey;
+}
+
+.match-div {
+  position: absolute;
+  top: 3.8rem;
+  margin: 0 0.5rem;
+}
+
+.match {
+  color: rgb(96, 192, 96);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.famous-nearby {
+  color: grey;
+  margin-left: 0.5rem;
+}
+
+.offer-div {
+  position: absolute;
+  top: 6rem;
+  background-color: rgba(21, 231, 196, 0.603);
+  padding: 1rem;
+  border-radius: 0 50rem 50rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cancellation {
+  position: absolute;
+  top: 9rem;
+  right: 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgb(21, 231, 196);
+}
+
+.promoted {
+  position: absolute;
+  background-color: rgb(86, 146, 236);
+  color: white;
+  width: 15rem;
+  height: 3rem;
+  top: -2rem;
+  right: 0;
+  text-align: center;
+  font-size: 2rem;
 }
